@@ -1,0 +1,24 @@
+<view class="cate">
+        <view class="title">修改类目</view>
+        <view class="detail">
+          <view class="delete">
+              <!-- 复选框 -->
+              <radio-group bindchange="checkboxChange" >
+                    <radio wx:for="{{types}}" value="{{index}}" checked="{{checkeds[index]}}" bindtap="check">
+                    {{item}}
+                    </radio>
+              </radio-group>
+              <button size="mini" type="default" bindtap="deleteCate">删除所选分类</button>
+          </view>
+          <!-- 删除和增加按钮 -->
+          <view class="add">
+            <!-- 一个文本框 -->
+              <view class="input">
+              <input placeholder="在此填入新增分类" maxlength="10" value="{{content}}" bindinput="bindCateInput"/>
+              </view>
+              <button size="mini" type="default" bindtap="addCate">增加分类</button>
+          </view>
+
+        </view>
+
+</view>

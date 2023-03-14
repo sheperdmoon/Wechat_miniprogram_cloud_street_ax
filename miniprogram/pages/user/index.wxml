@@ -1,0 +1,53 @@
+
+<!-- 个人信息 -->
+<view class="user_info_wrap">
+    <view wx:if="{{hasUserInfo}}" class="user_img_wrap">
+        <image class="user_bg" src="{{user.avatar}}" mode=""></image>
+        <view class="user_info">
+            <image class="user_icon" src="{{user.avatar}}"></image>
+            <view class="user_name">{{user.name}}</view>
+        </view>
+    </view>
+    <view wx:else class="user_btn">
+        <button bindtap="getUserProfile"> 获取头像昵称 </button>
+    </view>
+</view>
+
+<view class="bottom" wx:if="{{hasUserInfo}}">
+        <!-- 申请入驻||商家修改 -->
+        <view>
+            <button wx:if="{{user.openShop===1}}" type="default" bindtap="tidy_shop" data-page="/pages/tidy/index">整理店铺</button>
+            <button wx:else type="default" bindtap="apply_for_shop" data-page="/pages/apply/index">申请入驻</button>
+
+        </view>
+
+        <!-- 审核申请 -->
+        <view wx:if="{{user.power===1}}">
+            <button wx:if="{{user.power===1}}" type="default" bindtap="check_for_apply" data-page="/pages/check/index">审核申请</button>
+        </view>
+
+        <view wx:if="{{user.power===1}}">
+            <button wx:if="{{user.power===1}}" type="default" bindtap="change_type" data-page="/pages/type/index">修改类目</button>
+        </view>
+
+        <!-- <view>
+            <button type="default" bindtap="open_save_map" data-page="/pages/save/index">查看收藏</button>
+        </view> -->
+
+        <view>
+            <button type="default" bindtap="change_location" >更改定位</button>
+        </view>
+
+        <view>
+            <button type="default" open-type="contact"  >联系客服</button>
+        </view>
+
+
+        <view>
+            <button type="default" open-type="feedback"  >bug反馈</button>
+        </view>
+
+        <view class="text">申请入驻/合作请联系(wx/手机):</view>
+        <view class="text">19905958098</view>
+
+</view >

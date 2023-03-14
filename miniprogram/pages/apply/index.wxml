@@ -1,0 +1,69 @@
+<form bindsubmit="submit">
+  <view class="up">
+        <view class="upload_name">
+          <view class="upload_1">
+            <view class="first">店铺名称:</view>
+            <textarea class="second" value="{{shop.name}}" placeholder="请输入店铺名称（建议备注类目，如女装、男装、蛋糕等等）" maxlength="8" name="name"></textarea>
+          </view>       
+        </view>
+
+        <view class="upload_phone">
+          <view class="upload_1">
+            <view class="first">联系电话:</view>
+            <textarea class="second" value="{{shop.phone}}" placeholder="请输入联系电话" maxlength="20" name="phone"></textarea>
+          </view>       
+        </view>
+  
+        <view class="upload_address">
+          <view class="upload_1">
+            <view class="first">店铺地址:</view>
+            <textarea class="second" value="{{shop.address}}" placeholder="请输入店铺地址" maxlength="30" name="address"></textarea>
+          </view>       
+        </view>
+
+        <view class="upload_type">
+          <view class="upload_1">
+            <view class="first">店铺类别:</view>
+                  <radio-group name="type">
+                          <radio wx:for="{{types}}" value="{{item}}">
+                          {{item}}
+                          </radio>
+                    </radio-group>
+          </view>       
+        </view>
+
+        <view class="upload_jw">
+          <view class="upload_1">
+            <view>店铺经度:</view>
+            <input type="digit" value="{{shop.longitude}}" placeholder="至少6位小数" name="longitude"></input>
+            <view>店铺纬度:</view>  
+            <input type="digit" value="{{shop.latitude}}" placeholder="至少6位小数" name="latitude"></input>
+          </view>       
+        </view>
+
+        <view class="upload_detail">
+          <view>店铺简介（显示在公告栏上）:</view>
+          <textarea value="{{shop.notice}}" placeholder="请输入店铺简介（80字，可入驻后填写）" maxlength="80" name="notice"></textarea>
+        </view>
+
+
+        <view class="upload_photo">
+          图片（包括1张店铺外观和1张经营执照，仅供审核，不会展示）:
+        <scroll-view class="img" scroll-y="true">
+       
+              <block wx:for="{{img}}">
+                <image src="{{item}}" style="width:150rpx;height:150rpx"></image>
+                <button size="mini" type="warn" plain="true" bindtap="delete" data-id="{{index}}" data-src="{{item}}">删除图片</button>
+              </block>
+         
+        </scroll-view>
+        <view class="anniu">
+              <button size="mini" type="primary" bindtap="upload_img" >添加图片</button>
+            </view>
+      </view>
+    </view>
+
+    <button form-type="submit" type="primary">提交</button>
+
+</form>
+

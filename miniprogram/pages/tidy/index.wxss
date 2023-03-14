@@ -1,0 +1,63 @@
+.outer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.outer .cate {
+  display: flex;
+  flex-direction: column;
+}
+.outer .cate .title {
+  align-self: center;
+  font-size: large;
+  font-weight: 400;
+  padding-bottom: 20rpx;
+}
+.outer .cate .detail {
+  display: flex;
+  flex-direction: column;
+}
+.outer .cate .detail .delete {
+  display: flex;
+  flex-direction: column;
+}
+.outer .cate .detail .add {
+  padding-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.outer .cate .detail .add .input {
+  align-self: center;
+}
+.outer .notice {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30rpx;
+}
+.outer .notice .title {
+  align-self: center;
+  font-size: large;
+  font-weight: 400;
+  padding-bottom: 20rpx;
+}
+.outer .notice .background {
+  align-self: center;
+  height: 250rpx;
+  width: 90%;
+}
+.outer .notice .background textarea {
+  height: 100%;
+  width: 100%;
+}
+.outer button {
+  margin-top: 30rpx;
+}
+.input {
+  background-color: white;
+  border: 1rpx solid black;
+  width: 40%;
+}
+.background {
+  background-color: white;
+  border: 1rpx solid black;
+}

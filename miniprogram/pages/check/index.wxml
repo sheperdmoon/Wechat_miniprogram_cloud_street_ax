@@ -1,0 +1,53 @@
+<view class="outer" wx:for="{{apply_shop}}" wx:key="id">
+  <view class="up">
+        <view class="upload_name">
+          <view class="upload_1">
+            <view class="first">店铺名称:</view>
+            <textarea class="second" value="{{item.name}}"></textarea>
+          </view>       
+        </view>
+  
+        <view class="upload_address">
+          <view class="upload_1">
+            <view class="first">店铺地址:</view>
+            <textarea class="second" value="{{item.address}}"></textarea>
+          </view>       
+        </view>
+
+        <view class="upload_name">
+          <view class="upload_1">
+            <view class="first">店铺类别:</view>
+            <textarea class="second" value="{{item.type}}"></textarea>
+          </view>       
+        </view>
+
+        <view class="upload_jw">
+          <view class="upload_1">
+            <view>店铺经度:</view>
+            <input type="number" value="{{item.longitude}}"></input>
+            <view>店铺纬度:</view>  
+            <input type="number"  value="{{item.latitude}}"></input>
+          </view>       
+        </view>
+
+        <view class="upload_detail">
+          <view>店铺简介（显示在公告栏上）:</view>
+          <textarea placeholder="请输入店铺简介（80字）"  value="{{item.notice}}"></textarea>
+        </view>
+
+
+        <view class="upload_photo">
+          图片（包括店铺外观和经营执照等等）:
+        <scroll-view class="img" scroll-y="true">
+              <block wx:for="{{item.src}}" wx:for-item="item_img">
+                <image src="{{item_img}}" style="width:150rpx;height:150rpx"></image>
+              </block>
+        </scroll-view>
+       </view>
+     
+  </view>
+  <view class="btn">
+            <button class="one" bindtap="pass" data-index="{{index}}" type="primary" size="mini">通过</button>
+            <button class="one" bindtap="fail" data-index="{{index}}" type="primary" size="mini">驳回</button>
+      </view>
+</view>

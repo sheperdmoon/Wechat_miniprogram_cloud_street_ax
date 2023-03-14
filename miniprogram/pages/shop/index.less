@@ -1,0 +1,125 @@
+page{
+  height:100%;
+}
+.upper{
+    .first_wrap{
+        height: 100rpx;
+        display: flex;
+        .np_wrap{
+            flex:4;
+            .name{
+                font-size: 40rpx;
+                font-weight: 1000;
+                padding-left: 20rpx;
+            }
+            .phone{
+                padding-top: 5rpx;
+                padding-left: 20rpx;
+        
+            }
+        }
+        .save{
+            height: 100%;
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            image{
+                align-self: center;
+                width:40%;
+            }
+            text{
+                align-self: center;
+
+            }
+
+        }
+        padding-top: 10rpx;
+        padding-bottom: 10rpx;
+    }
+  
+    .intro{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:4;
+        color: #000;
+        font-size: 27rpx;
+        padding:0 20rpx ;
+        word-break: break-all;
+    }
+    padding-bottom: 20rpx;
+    border-bottom: 5rpx solid grey;
+}
+
+.cates{
+  height: 100%;
+  .cates_container{
+      height: 100%;
+      display: flex;
+      .left_menu{ 
+          flex:3;
+          background-color: lightblue;
+          .menu_item{
+              height: 120rpx; 
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size:30rpx;
+          }
+          .active{
+              color:red;
+              border-left: 5rpx solid currentColor;
+          }
+      }
+      .right_content{
+          flex:12;
+          .goods_content{
+                    padding-top: 10rpx;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .goods_group{
+                            display: flex;
+                            flex-direction: column;
+                            width: 50%;
+                            // height: 600rpx;
+                            // justify-content: space-between;
+                            navigator{
+                                display: flex;
+                                // height: 450rpx;
+                                align-items: center;
+                                justify-content: center;
+                                image{ 
+                                    width: 90%;
+                                }
+                            } 
+                            .goods_info{
+                                .goods_name{
+                                    height: 70rpx;
+                                    display: -webkit-box;
+                                    overflow: hidden;
+                                    -webkit-box-orient:vertical;
+                                    -webkit-line-clamp:2;
+                                    color: #000;
+                                    font-size: 27rpx;
+                                    padding:0 10rpx ;
+                                    word-break: break-all;
+                                }
+                                .goods_price{
+                                    padding:0 10rpx ;
+                                    color: red;
+                                }
+                            }
+                            .delete_btn{
+                              display: flex;
+                              align-items: center;
+                            }
+                    }
+        }
+    }
+
+        }
+      }
+      
+
+  

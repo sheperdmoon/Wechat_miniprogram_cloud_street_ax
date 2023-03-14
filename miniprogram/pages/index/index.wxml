@@ -1,0 +1,49 @@
+<view class="page">
+    <map
+      id="myMap"
+      style="width: 100%; height:100%;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      bindmarkertap="markertap"
+      bindcallouttap="callouttap"
+      bindlabeltap="labeltap"
+      markers="{{markers}}"
+      scale="16"
+      show-location="true"
+    >
+    <cover-view class="cv1">
+       <button class="bt1" type="default" size="mini" bindtap="back_default_location">
+    <cover-view>
+        默认定位
+    </cover-view>
+        
+        </button>
+    </cover-view>
+
+    <cover-view class="cv3">
+       <button wx:if="{{onAll}}"  class="bt3" type="default" size="mini" bindtap="openSave" >
+                <cover-view>
+                    显示收藏
+                </cover-view>
+        
+        </button>
+        <button wx:if="{{onSave}}"  class="bt3" type="default" size="mini" bindtap="openAll" >
+                <cover-view>
+                    显示所有
+                </cover-view>
+        
+        </button>
+    </cover-view>
+
+
+    <cover-view class="cv2">
+       <button class="bt2" type="default" size="mini" bindtap="choose_Location">
+    <cover-view>
+        选择定位
+    </cover-view>
+        
+        </button>
+    </cover-view>
+    </map>
+
+</view>

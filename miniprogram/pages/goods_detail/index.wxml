@@ -1,0 +1,61 @@
+<view class="detail_swiper">
+    <swiper 
+    circular="{{true}}"
+    autoplay="{{true}}"
+    indicator-dots="{{true}}"
+    >
+        <swiper-item 
+        wx:for="{{pics}}"
+        wx:key="*this"   
+        bindtap="handlePreviewImage"
+        data-index="{{index}}"
+        >
+            <image src="{{item}}" mode="aspectFit">
+            </image>
+        
+        </swiper-item>
+    </swiper>
+</view>
+
+<view class="goods_price">
+    ￥{{product.price}}
+</view>
+
+<view class="goods_info">
+    <view class="goods_name">
+        {{product.name}}
+        {{product.intro}}
+    </view>
+</view>
+
+
+<view class="goods_detail">
+    <view class="goods_info_title">图文详情</view>    
+    <view class="goods_content" wx:for="{{product.img}}" wx:key="*this">
+        <image mode="widthFix" src="{{item}}"> </image>
+    </view>
+</view>
+
+<view class="tool_bar">
+    <view class="tool_item">
+        <view class="iconfont icon-fenxiang">
+        </view>
+        <view class="title">分享</view>
+        <button open-type="share"></button>
+
+    </view>
+
+   <view class="tool_item" bindtap="look_for_cart">
+        <view class="iconfont icon-gouwuchekong">
+        </view>
+        <view class="title" >查看购物车</view>
+    </view>
+
+    <view class="tool_item cart"
+        bindtap="handleCartAdd">
+        加入购物车
+    </view>
+
+
+
+</view>
